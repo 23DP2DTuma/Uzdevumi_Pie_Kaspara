@@ -1,0 +1,1 @@
+# Uzdevumi_Pie_Kaspara
