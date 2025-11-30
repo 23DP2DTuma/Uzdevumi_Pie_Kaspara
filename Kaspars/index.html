@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="lv">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Autosalons - Kartītes ar hover efektiem</title>
+    <meta name="description" content="Stilizētas kartītes ar hover efektiem" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Header / navbar-->
+    <header class="header">
+      <div class="section-content">
+        <div class="header_inner">
+          <div class="header_logo">MoGo</div>
+
+          <nav class="nav-menu">
+            <a class="nav-link" href="#galvene">Galvene</a>
+            <div class="dropdown">
+              <a class="nav-link" href="#cards">Auto ▼</a>
+              <div class="dropdown-content">
+                <a href="#">Sedani</a>
+                <a href="#">Sporta</a>
+                <a href="#">Apvidus</a>
+              </div>
+            </div>
+            <a class="nav-link" href="#kontakti">Kontakti</a>
+            <button class="ld-button" id="theme-tooggleID">☀️ Gaišā</button>
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <!--/.container-->
+    </header>
+
+    <main>
+      <!-- Hero section -->
+      <section class="hero-section" id="galvene">
+        <div class="section-content">
+          <div class="hero-details">
+            <h2 class="title">Vislabākais autosalons</h2>
+            <p class="description">
+              Tas ir mans autosalons, kurā es glabu daudz informācijas par
+              dažādiem auto.
+            </p>
+            <aside class="describing">
+              Tas nav mana gala ideja projektam, ceru ka atradīšu to.
+            </aside>
+          </div>
+          <div class="hero-image-wrapper">
+            <img src="" alt="3D auto attēls" class="hero-image" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Cards section -->
+      <section class="cards-section" id="cards">
+        <div class="section-content">
+          <h2 class="section-title">Mūsu Populārākie Auto</h2>
+          <div class="cards-container">
+            <!-- Kartīte 1 -->
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=400&h=200&fit=crop"
+                alt="BMW M3"
+                class="card-image"
+              />
+              <div class="card-content">
+                <h3 class="card-title">BMW M3 Competition</h3>
+                <p class="card-description">
+                  Augstākās klases sporta sedans ar 510 ZS dzinēju un izcilu
+                  veiktspēju. Ideāls izvēle tiem, kas mīl ātrumu un luksus.
+                </p>
+                <div class="card-price">€89,990</div>
+              </div>
+              <button class="card-button">Skatīt Detaļas</button>
+            </div>
+
+            <!-- Kartīte 2 -->
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1580274455191-1c62238fa333?w=400&h=200&fit=crop"
+                alt="Mercedes-Benz C-Class"
+                class="card-image"
+              />
+              <div class="card-content">
+                <h3 class="card-title">Porsche 911 turbo</h3>
+                <p class="card-description">
+                  Elegants un komfortabls sedans ar modernu tehnoloģiju
+                  aprīkojumu. Perfekts līdzsvars starp komfortu un stilu.
+                </p>
+                <div class="card-price">€65,500</div>
+              </div>
+              <button class="card-button">Skatīt Detaļas</button>
+            </div>
+
+            <!-- Kartīte 3 -->
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=400&h=200&fit=crop"
+                alt="Audi RS6"
+                class="card-image"
+              />
+              <div class="card-content">
+                <h3 class="card-title">Audi RS6 Avant</h3>
+                <p class="card-description">
+                  Sportisks universālis ar 600 ZS V8 dzinēju. Apvieno
+                  praktiskumu ar neticamu veiktspēju un dizainu.
+                </p>
+                <div class="card-price">€125,000</div>
+              </div>
+              <button class="card-button">Skatīt Detaļas</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Weather section-->
+      <section
+        class="api-section section-content"
+        id="weather-api"
+        style="margin-bottom: 50px"
+      >
+        <h2 class="section-title">Laikapstākļu ziņas</h2>
+
+        <div style="text-align: center; margin-bottom: 30px">
+          <input
+            type="text"
+            id="cityInput"
+            placeholder="Ievadi pilsētu (piem. Riga)"
+            class="search-input"
+            style="width: 250px"
+          />
+          <button
+            id="loadWeatherBtn"
+            class="ld-button"
+            style="padding: 10px 20px"
+          >
+            Meklēt
+          </button>
+        </div>
+
+        <div
+          class="cards-container"
+          id="weatherContainer"
+          style="display: flex; justify-content: center; flex-wrap: wrap"
+        ></div>
+      </section>
+
+      <!-- Footer section -->
+      <section class="footer-section">
+        <div class="section-content">
+          <p class="copyright-text">© 2025 Auto Sistēma</p>
+          <div class="policy-text">
+            <a href="#" class="policy-link">Privātuma politika</a>
+            <span class="seperator">-</span>
+            <a href="#" class="policy-link">Atmaksas politika</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <section class="search-section" style="text-align: center; margin: 2rem 0">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Meklēt auto..."
+        class="search-input"
+      />
+    </section>
+
+    <section id="kontakti" class="contact-section section-content">
+      <h2 class="section-title">Sazinies ar mums</h2>
+      <form id="contactForm" class="contact-form">
+        <div class="form-group">
+          <label for="name">Vārds:</label>
+          <input type="text" id="name" name="name" />
+          <span class="error-msg" id="nameError"></span>
+        </div>
+        <div class="form-group">
+          <label for="email">E-pasts:</label>
+          <input type="email" id="email" name="email" />
+          <span class="error-msg" id="emailError"></span>
+        </div>
+        <div class="form-group">
+          <label for="message">Ziņojums:</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+          <span class="error-msg" id="messageError"></span>
+        </div>
+        <button type="submit" class="card-button">Nosūtīt</button>
+        <p
+          id="successMessage"
+          style="color: green; display: none; margin-top: 10px"
+        >
+          Ziņa nosūtīta veiksmīgi!
+        </p>
+      </form>
+    </section>
+
+    <div id="infoModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2 id="modalTitle">Auto Nosaukums</h2>
+        <img
+          id="modalImage"
+          src=""
+          alt="Auto"
+          style="
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 15px 0;
+          "
+        />
+        <p id="modalDescription">Šeit būs paplašināts apraksts...</p>
+        <div class="modal-footer">
+          <button class="card-button" id="closeBtn">Aizvērt</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
